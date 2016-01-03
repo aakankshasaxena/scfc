@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'calc/style.css' %}" />
+</head>
+<body>
+
+<form action="/calc/compute/" method ="post" class="basic-grey">
+<h1>School Carbon Footprint Calculator<span>Please enter numerical values, unless otherwise indicated.</span></h1>
+
+{% csrf_token %}
+  School Name:<br>
+  <input type="text" name="school">
+  <br>
+  City:<br>
+  <input type="text" name="city">
+  <br>
+  State:<br>
+  <input type="text" name="state">
+  <br>
+  Emissions:<br>
+  <input type="text" name="emissions">
+  <br>
+  Area:<br>
+  <input type="text" name="area">
+  <br>
+  Levels:<br>
+  <input type="text" name="levels">
+  <br>
+  Teachers:<br>
+  <input type="text" name="teachers">
+  <br>
+  Staff:<br>
+  <input type="text" name="staff">
+  <br>
+  Classrooms:<br>
+  <input type="text" name="classrooms">
+  <br>
+  Students:<br>
+  <input type="text" name="students">
+  <br>
+  Hours in school day:<br>
+  <input type="text" name="hours">
+  <br>
+  Percentage of students who walk to school:<br>
+  <input type="text" name="p_walk">
+  <br>
+  Percentage of students who carpool to school:<br>
+  <input type="text" name="p_carpool">
+  <br>
+  Percentage of students who take a bus to school:<br>
+  <input type="text" name="p_bus">
+  <br>
+  Percentage of students who bike to school:<br>
+  <input type="text" name="p_bike">
+  <br>
+  Percentage of students who take the train to school:<br>
+  <input type="text" name="p_train">
+  <br>
+  Percentage of students who take a car to school:<br>
+  <input type="text" name="p_drive">
+  <br>
+  Number of buses:<br>
+  <input type="text" name="buses">
+  <br>
+  Average student distance:<br>
+  <input type="text" name="avg_distance">
+  <br>
+  Average bus capacity:<br>
+  <input type="text" name="avg_bus_capacity">
+  <br>
+  Students in bus:<br>
+  <input type="text" name="bus_students">
+  <br>
+  Heating type:<br>
+  <input type="text" name="heating_type">
+  <br>
+  Heating days:<br>
+  <input type="text" name="heating_days">
+  <br>
+  Heating units:<br>
+  <input type="text" name="heating_units">
+  <br>
+  Average heating watts:<br>
+  <input type="text" name="heating_watts">
+  <br>
+  AC type:<br>
+  <input type="text" name="ac_type">
+  <br>
+  AC days:<br>
+  <input type="text" name="ac_days">
+  <br>
+  AC units:<br>
+  <input type="text" name="ac_units">
+  <br>
+  Average AC watts:<br>
+  <input type="text" name="ac_watts">
+  <br>
+  Water heater type:<br>
+  <input type="text" name="wh_type">
+  <br>
+  Average water heater watts:<br>
+  <input type="text" name="avg_wh_watts">
+  <br>
+  Water heater units:<br>
+  <input type="text" name="wh_units">
+  <br>
+  Classroom light bulb type:<br>
+  <input type="text" name="clb_type">
+  <br>
+  Average bulbs in classroom:<br>
+  <input type="text" name="clb_units">
+  <br>
+  Average classroom bulb watts:<br>
+  <input type="text" name="clb_watts">
+  <br>
+  Non-classroom light bulb type:<br>
+  <input type="text" name="nclb_type">
+  <br>
+  Approximate bulbs outside of classroom:<br>
+  <input type="text" name="nclb_units">
+  <br>
+  Average bulb watts outside of classroom:<br>
+  <input type="text" name="nclb_watts">
+  <br>
+  Average carpool route distance:<br>
+  <input type="text" name="avg_carpool_dist">
+  <br>
+  Average carpool students:<br>
+  <input type="text" name="avg_carpool_students">
+  <br>
+  Average bus route distance:<br>
+  <input type="text" name="avg_bus_dist">
+  <br>
+  <br><br>
+  <input type="submit" value="Submit">  
+</form>
+
+</body>
+</html>
